@@ -53,10 +53,9 @@ Inside the inner loop, we compare adjacent elements and swap them if they are in
 Here's an example of how to use the `BubbleSort` method:
 
 ```csharp
-int[] numbers = { 5, 2, 8, 1, 9 };
-BubbleSort(numbers);
-
-// The numbers array is now sorted: { 1, 2, 5, 8, 9 }
+int[] arr = [1, 9, 5, 6, 3, 7, 4, 2, 8];
+        BubbleSort.Sort(arr);
+// The numbers array is now sorted: [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 ```
 
 You can call the `BubbleSort` method with any integer array, and it will sort the array in ascending order.
