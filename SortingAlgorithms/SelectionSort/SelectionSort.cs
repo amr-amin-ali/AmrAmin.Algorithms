@@ -1,27 +1,27 @@
 ﻿namespace AmrAmin.Algorithms.SortingAlgorithms.SelectionSort;
 public class SelectionSort
 {
-    public static void Sort(int[] arr)
+    public static void Sort(int[] array)
     {
-        Console.WriteLine(@"/==============================================================\");
-        PrintArray(arr: arr, title: "Selection Sort Algorithm", message: "Array to sort:");
+        Utils.Utils.PrintArrayHeader(algorithmName: "Selection Sort Algorithm");
+        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
-        for (int i = 0; i < arr.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            int minIndex = FindMinIndex(arr, i, i);
-            Swap(arr, minIndex, i);
+            int minIndex = FindMinIndex(array, i, i);
+            Swap(array, minIndex, i);
         }
 
-        PrintArray(arr: arr, message: "Sorted array");
-        Console.WriteLine("\\==============================================================/\n\n\n");
+        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.Utils.PrintArrayFooter();
 
     }
 
-    private static int FindMinIndex(int[] arr, int i, int minIndex)
+    private static int FindMinIndex(int[] array, int i, int minIndex)
     {
-        for (int j = i; j < arr.Length; j++)
+        for (int j = i; j < array.Length; j++)
         {
-            if (arr[j] < arr[minIndex])
+            if (array[j] < array[minIndex])
             {
                 minIndex = j;
             }
@@ -30,33 +30,10 @@ public class SelectionSort
         return minIndex;
     }
 
-    private static void Swap(int[] arr, int index1, int index2)
+    private static void Swap(int[] array, int index1, int index2)
     {
-        int temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
-    }
-
-    private static void PrintArray(int[] arr, string message, string title = null)
-    {
-        if (title is not null)
-        {
-            Console.WriteLine($"|____________________{title}__________________|");
-        }
-        Console.WriteLine($"|\t-{message}");
-        Console.Write("|\t\t[");
-        for (int i = 0; i < arr.Length; i++)
-        {
-            if (i == arr.Length - 1)
-            {
-                Console.Write($"{arr[i]}");
-
-            }
-            else
-            {
-                Console.Write($"{arr[i]}, ");
-            }
-        }
-        Console.Write("]\n");
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
     }
 }
