@@ -6,19 +6,18 @@ internal class InsertionSort
         Utils.Utils.PrintArrayHeader(algorithmName: "Insertion Sort Algorithm");
         Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
-        int n = array.Length;
-        for (int i = 1; i < n; ++i)
+        for (int i = 1; i < array.Length; ++i)
         {
-            int key = array[i];
+            int current = array[i];
             int j = i - 1;
 
             // Move elements of arr[0..i-1], that are greater than key, to one position ahead of their current position
-            while (j >= 0 && array[j] > key)
+            while (j >= 0 && array[j] > current)
             {
                 array[j + 1] = array[j];
                 j--;
             }
-            array[j + 1] = key;
+            array[j + 1] = current;
         }
 
         Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");

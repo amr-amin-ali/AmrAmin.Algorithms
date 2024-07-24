@@ -2,6 +2,7 @@
 
 Insertion Sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It works by iterating through the array, removing one element at a time, and inserting it into the correct position in the sorted portion of the array.
 
+
 ## How it Works
 
 1. Iterate through the array from the second element to the last element.
