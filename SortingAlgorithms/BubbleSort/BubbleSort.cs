@@ -4,7 +4,7 @@ public class BubbleSort
     public static void Sort(int[] arr)
     {
         Console.WriteLine(@"/==============================================================\");
-        PrintArray(arr: arr, title: "Bubble Sort Algorithm", message: "Array to sort:")
+        PrintArray(arr: arr, title: "Bubble Sort Algorithm", message: "Array to sort:");
 
         bool isSorted;// Variable to break the loop as early as the array is already sorted instead of looping till the end in all cases
         for (int i = 0; i < arr.Length; i++)
@@ -25,7 +25,7 @@ public class BubbleSort
             }
         }
         PrintArray(arr: arr, message: "Sorted array");
-        Console.WriteLine(@"\==============================================================/");
+        Console.WriteLine("\\==============================================================/\n\n\n");
     }
 
     private static void Swap(int[] arr, int index1, int index2)
