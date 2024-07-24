@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="StringManipulationAlgorithms\" />
     <Folder Include="SearchingAlgorithms\" />
-    <Folder Include="SortingAlgorithms\" />
   </ItemGroup>
 
 </Project>
