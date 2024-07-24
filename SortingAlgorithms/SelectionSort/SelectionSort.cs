@@ -6,27 +6,35 @@ public class SelectionSort
         Console.WriteLine(@"/==============================================================\");
         PrintArray(arr: arr, title: "Selection Sort Algorithm", message: "Array to sort:");
 
-        int n = arr.Length;
-        for (int i = 0; i < n - 1; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
-            int minIndex = i;
-            for (int j = i + 1; j < n; j++)
-            {
-                if (arr[j] < arr[minIndex])
-                {
-                    minIndex = j;
-                }
-            }
-
-            // Swap the found minimum element with the first element
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
+            int minIndex = FindMinIndex(arr, i, i);
+            Swap(arr, minIndex, i);
         }
 
         PrintArray(arr: arr, message: "Sorted array");
         Console.WriteLine("\\==============================================================/\n\n\n");
 
+    }
+
+    private static int FindMinIndex(int[] arr, int i, int minIndex)
+    {
+        for (int j = i; j < arr.Length; j++)
+        {
+            if (arr[j] < arr[minIndex])
+            {
+                minIndex = j;
+            }
+        }
+
+        return minIndex;
+    }
+
+    private static void Swap(int[] arr, int index1, int index2)
+    {
+        int temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
     }
 
     private static void PrintArray(int[] arr, string message, string title = null)
