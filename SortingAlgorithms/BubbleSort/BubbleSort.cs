@@ -4,15 +4,24 @@ public class BubbleSort
     public static void Sort(int[] arr)
     {
         Console.WriteLine(@"/==============================================================\");
-        PrintArray(arr: arr, title: "Bubble Sort Algorithm", message: "Array to sort:");
+        PrintArray(arr: arr, title: "Bubble Sort Algorithm", message: "Array to sort:")
+
+        bool isSorted;// Variable to break the loop as early as the array is already sorted instead of looping till the end in all cases
         for (int i = 0; i < arr.Length; i++)
         {
-            for (int j = 1; j < arr.Length; j++)
+            isSorted = true;
+            for (int j = 1; j < arr.Length - i; j++)
             {
                 if (arr[j] < arr[j - 1])
                 {
                     Swap(arr, j, j - 1);
+                    // Swap occured, so array is not sorted
+                    isSorted = false;
                 }
+            }
+            if (isSorted)
+            {
+                break;
             }
         }
         PrintArray(arr: arr, message: "Sorted array");
