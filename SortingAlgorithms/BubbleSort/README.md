@@ -16,23 +16,28 @@ The algorithm gets its name from the way smaller or larger elements "bubble up" 
 Here's an example implementation of the Bubble Sort algorithm in C#:
 
 ```csharp
-public static void BubbleSort(int[] arr)
+public static void Sort(int[] arr)
 {
-    int n = arr.Length;
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = 1; j < arr.Length; j++)
         {
-            if (arr[j] > arr[j + 1])
+            if (arr[j] < arr[j - 1])
             {
-                // Swap arr[j] and arr[j+1]
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                Swap(arr, j, j - 1);
             }
         }
     }
 }
+
+
+private static void Swap(int[] arr, int index1, int index2)
+{
+    int temp = arr[index1];
+    arr[index1] = arr[index2];
+    arr[index2] = temp;
+}
+
 ```
 
 The `BubbleSort` method takes an integer array `arr` as input and sorts it in ascending order using the Bubble Sort algorithm.
