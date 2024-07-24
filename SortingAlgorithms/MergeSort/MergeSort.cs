@@ -17,27 +17,32 @@ public static class MergeSort
 
     private static void MergeSortAlgorithm(int[] array)
     {
-        if (array.Length > 1)
+        // if array has single element, then it is already sorted.
+        // if array has single element, then it is already sorted.
+        if (array.Length < 2)
         {
-            int middle = array.Length / 2;
-            int[] left = new int[middle];
-            int[] right = new int[array.Length - middle];
-
-            for (int i = 0; i < middle; i++)
-            {
-                left[i] = array[i];
-            }
-
-            for (int i = middle; i < array.Length; i++)
-            {
-                right[i - middle] = array[i];
-            }
-
-            MergeSortAlgorithm(left);
-            MergeSortAlgorithm(right);
-
-            Merge(array, left, right);
+            return;
         }
+
+        int middle = array.Length / 2;
+        int[] left = new int[middle];
+        int[] right = new int[array.Length - middle];
+
+        for (int i = 0; i < middle; i++)
+        {
+            left[i] = array[i];
+        }
+
+        for (int i = middle; i < array.Length; i++)
+        {
+            right[i - middle] = array[i];
+        }
+
+        MergeSortAlgorithm(left);
+        MergeSortAlgorithm(right);
+
+        Merge(array, left, right);
+
     }
 
     private static void Merge(int[] result, int[] left, int[] right)
