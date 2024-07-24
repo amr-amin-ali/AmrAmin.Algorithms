@@ -63,6 +63,6 @@ The time complexity of Selection Sort is shown in the following table:
 | Total      | O(n^2)     | O(n^2)     |
 | Complexity | Quadratic  | Quadratic  |
 
-The best-case and worst-case scenarios both have a quadratic time complexity, making Selection Sort less efficient for large datasets compared to other sorting algorithms like Quicksort, Mergesort, or Heapsort.
+The best-case and worst-case scenarios both have a quadratic time complexity,`so it is a very slow algorithm` making Selection Sort less efficient for large datasets compared to other sorting algorithms like Quicksort, Mergesort, or Heapsort.
 
 However, Selection Sort is simple to implement and can be useful in certain situations, such as when the input array is small or when the cost of swapping elements is high compared to the cost of comparisons.
