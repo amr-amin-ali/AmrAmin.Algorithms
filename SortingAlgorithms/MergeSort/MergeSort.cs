@@ -18,7 +18,6 @@ public static class MergeSort
     private static void MergeSortAlgorithm(int[] array)
     {
         // if array has single element, then it is already sorted.
-        // if array has single element, then it is already sorted.
         if (array.Length < 2)
         {
             return;
