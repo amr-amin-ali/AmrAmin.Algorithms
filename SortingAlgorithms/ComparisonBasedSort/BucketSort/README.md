@@ -26,44 +26,68 @@ The key idea behind Bucket Sort is to leverage the uniform distribution of the i
 Here's an example implementation of the Bucket Sort algorithm in C#:
 
 ```csharp
-public static void BucketSort(float[] arr)
+
+public static class BucketSort
 {
-    int n = arr.Length;
 
-    // Create the buckets
-    List<float>[] buckets = new List<float>[n];
-    for (int i = 0; i < n; i++)
-        buckets[i] = new List<float>();
-
-    // Distribute the elements into the buckets
-    foreach (float num in arr)
-        buckets[(int)(n * num)].Add(num);
-
-    // Sort the buckets
-    for (int i = 0; i < n; i++)
-        buckets[i].Sort();
-
-    // Concatenate the sorted buckets
-    int index = 0;
-    foreach (List<float> bucket in buckets)
+    public static void Sort(float[] array, int numberOfBuckets)
     {
-        foreach (float num in bucket)
-            arr[index++] = num;
+        Utils.Utils.PrintArrayHeader(algorithmName: "Bucket Sort Algorithm");
+        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+
+        List<List<float>> buckets = CreateBuckets(array: array, numberOfBuckets: numberOfBuckets);
+
+        int i = 0;
+        foreach (var buckket in buckets)
+        {
+            // sort the buckket
+            buckket.Sort((a, b) => a.CompareTo(b));
+            // insert into the main array
+            foreach (var item in buckket)
+            {
+                array[i++] = item;
+            }
+        }
+
+
+        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.Utils.PrintArrayFooter();
+
+    }
+
+    private static List<List<float>> CreateBuckets(float[] array, int numberOfBuckets)
+    {
+        List<List<float>> buckets = new List<List<float>>();
+
+        // Initialize the buckets
+        for (int i = 0; i <= numberOfBuckets; i++)
+        {
+            buckets.Add(new List<float>());
+        }
+
+        foreach (var item in array)
+        {
+            var i = (int)item / numberOfBuckets;
+            buckets[i].Add(item);
+        }
+
+        return buckets;
     }
 }
+
 ```
 
-The `BucketSort` method takes a floating-point array `arr` and modifies it in-place to sort the array in ascending order.
+The `Sort` method takes a floating-point array `array` and modifies it in-place to sort the array in ascending order.
 
 ## Usage Example
 
 Here's an example of how to use the `BucketSort` method:
 
 ```csharp
-float[] numbers = { 0.42f, 0.12f, 0.67f, 0.28f, 0.95f };
-BucketSort(numbers);
+float[] bucketSortArray = [1.5F, 9.4F, 5.2F, 6.1F, 3.9F, 7.7F, 4.1F, 2.2F, 8.5F];
+BucketSort.Sort(array: bucketSortArray, numberOfBuckets: 3);
 
-// The numbers array is now sorted: { 0.12f, 0.28f, 0.42f, 0.67f, 0.95f }
+// The numbers array is now sorted:  {1.5, 2.2, 3.9, 4.1, 5.2, 6.1, 7.7, 8.5, 9.4}
 ```
 
 You can call the `BucketSort` method with any floating-point array, and it will sort the array in ascending order.
