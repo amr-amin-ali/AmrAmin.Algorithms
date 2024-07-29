@@ -45,24 +45,15 @@ public static class LinearSearch
 
 This method takes an array of type `T` and a target value of type `T`, and returns the index of the target value in the array, or `-1` if the target value is not found.
 
-The `where T : IEquatable<T>` constraint ensures that the type `T` implements the `IEquatable<T>` interface, which allows us to compare the elements of the array with the target value using the `Equals` method.
 
 ## Usage Example
 
 Here's an example of how to use the `LinearSearch` method:
 
 ```csharp
-int[] numbers = { 5, 2, 8, 12, 1 };
-int targetValue = 8;
-int index = LinearSearch(numbers, targetValue);
-if (index == -1)
-{
-    Console.WriteLine($"The value {targetValue} was not found in the array.");
-}
-else
-{
-    Console.WriteLine($"The value {targetValue} was found at index {index}.");
-}
+int[] linearSearchArray = [1, 9, 5, 6, 3, 7, 4, 2, 8];
+LinearSearch.Search(linearSearchArray, 7);
+// result is: 5
 ```
 
 In this example, we create an array of integers and search for the value `8` using the `LinearSearch` method. If the value is found, we print the index where it was found. If the value is not found, we print a message indicating that the value was not found.
