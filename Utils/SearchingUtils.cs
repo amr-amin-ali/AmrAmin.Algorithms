@@ -5,10 +5,10 @@ public static class SearchingUtils
 {
     public static void PrintSearchHeader(string algorithmName)
     {
-        Console.WriteLine(@"/====================================================\");
+        Console.WriteLine(@"/============================================================\");
         if (algorithmName is not null)
         {
-            Console.WriteLine($"|____________________{algorithmName}__________________|");
+            Console.WriteLine($"|___________________{algorithmName}_________________|");
         }
     }
 
@@ -48,6 +48,6 @@ public static class SearchingUtils
 
     public static void PrintArrayFooter()
     {
-        Console.WriteLine("\\====================================================/\n\n\n");
+        Console.WriteLine("\\============================================================/\n\n\n");
     }
 }

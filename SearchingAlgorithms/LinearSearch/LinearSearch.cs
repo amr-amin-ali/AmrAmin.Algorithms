@@ -11,9 +11,9 @@ public static class LinearSearch
         SearchingUtils.PrintTarget(target);
         for (int i = 0; i < arr.Length; i++)
         {
-            if (arr[i].Equals(target))
+            if (arr[i] == target)
             {
-                SearchingUtils.PrintResult(i);
+                SearchingUtils.PrintResult(arr[i]);
                 SearchingUtils.PrintArrayFooter();
                 return i;
             }
