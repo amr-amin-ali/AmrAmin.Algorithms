@@ -3,6 +3,7 @@ using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.InsertionSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.MergeSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.QuickSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.SelectionSort;
+using AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort;
 
 public class Program
 {
@@ -23,6 +24,9 @@ public class Program
         /////////////////////////////////////////
         int[] quickSortArray = [1, 9, 5, 6, 3, 7, 4, 2, 8];
         QuickSort.Sort(quickSortArray);
+        /////////////////////////////////////////
+        int[] countingSortArray = [1, 9, 5, 6, 3, 7, 4, 2, 8];
+        CountingSort.Sort(countingSortArray);
         /////////////////////////////////////////
 
     }
