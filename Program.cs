@@ -1,8 +1,8 @@
-﻿using AmrAmin.Algorithms.SortingAlgorithms.BubbleSort;
-using AmrAmin.Algorithms.SortingAlgorithms.InsertionSort;
-using AmrAmin.Algorithms.SortingAlgorithms.MergeSort;
-using AmrAmin.Algorithms.SortingAlgorithms.QuickSort;
-using AmrAmin.Algorithms.SortingAlgorithms.SelectionSort;
+﻿using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.BubbleSort;
+using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.InsertionSort;
+using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.MergeSort;
+using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.QuickSort;
+using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.SelectionSort;
 
 public class Program
 {

@@ -1,4 +1,4 @@
-﻿namespace AmrAmin.Algorithms.SortingAlgorithms.QuickSort;
+﻿namespace AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.QuickSort;
 public static class QuickSort
 {
     public static void Sort(int[] array)

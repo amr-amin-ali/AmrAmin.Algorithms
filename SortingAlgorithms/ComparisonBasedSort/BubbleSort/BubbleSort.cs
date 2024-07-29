@@ -1,4 +1,4 @@
-﻿namespace AmrAmin.Algorithms.SortingAlgorithms.BubbleSort;
+﻿namespace AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.BubbleSort;
 public class BubbleSort
 {
     public static void Sort(int[] array)

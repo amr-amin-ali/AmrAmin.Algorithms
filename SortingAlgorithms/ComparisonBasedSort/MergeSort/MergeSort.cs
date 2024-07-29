@@ -1,4 +1,4 @@
-﻿namespace AmrAmin.Algorithms.SortingAlgorithms.MergeSort;
+﻿namespace AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.MergeSort;
 public static class MergeSort
 {
 

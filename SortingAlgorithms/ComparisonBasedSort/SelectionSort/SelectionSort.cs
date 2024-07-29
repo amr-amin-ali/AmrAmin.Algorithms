@@ -1,4 +1,4 @@
-﻿namespace AmrAmin.Algorithms.SortingAlgorithms.SelectionSort;
+﻿namespace AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.SelectionSort;
 public class SelectionSort
 {
     public static void Sort(int[] array)

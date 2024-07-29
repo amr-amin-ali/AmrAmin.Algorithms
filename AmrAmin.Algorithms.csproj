@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="SortingAlgorithms\NonComparisonBasedSort\" />
     <Folder Include="StringManipulationAlgorithms\" />
     <Folder Include="SearchingAlgorithms\" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace AmrAmin.Algorithms.SortingAlgorithms.InsertionSort;
+﻿namespace AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.InsertionSort;
 internal class InsertionSort
 {
     public static void Sort(int[] array)
