@@ -1,7 +1,7 @@
 ﻿namespace AmrAmin.Algorithms.Utils;
 using System;
 
-public static class Utils
+public static class SortingUtils
 {
     public static void PrintArrayHeader(string algorithmName)
     {

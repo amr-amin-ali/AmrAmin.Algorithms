@@ -3,8 +3,8 @@ public class BubbleSort
 {
     public static void Sort(int[] array)
     {
-        Utils.Utils.PrintArrayHeader(algorithmName: "Bubble Sort Algorithm");
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        Utils.SortingUtils.PrintArrayHeader(algorithmName: "Bubble Sort Algorithm");
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
         bool isSorted;// Variable to break the loop as early as the array is already sorted instead of looping till the end in all cases
         for (int i = 0; i < array.Length; i++)
@@ -24,8 +24,8 @@ public class BubbleSort
                 break;
             }
         }
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
-        Utils.Utils.PrintArrayFooter();
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.SortingUtils.PrintArrayFooter();
     }
 
     private static void Swap(int[] array, int index1, int index2)

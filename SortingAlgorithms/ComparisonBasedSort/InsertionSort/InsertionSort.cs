@@ -3,8 +3,8 @@ internal class InsertionSort
 {
     public static void Sort(int[] array)
     {
-        Utils.Utils.PrintArrayHeader(algorithmName: "Insertion Sort Algorithm");
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        Utils.SortingUtils.PrintArrayHeader(algorithmName: "Insertion Sort Algorithm");
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
         for (int i = 1; i < array.Length; ++i)
         {
@@ -20,8 +20,8 @@ internal class InsertionSort
             array[j + 1] = current;
         }
 
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
-        Utils.Utils.PrintArrayFooter();
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.SortingUtils.PrintArrayFooter();
 
     }
 }

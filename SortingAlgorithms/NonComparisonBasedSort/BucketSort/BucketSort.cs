@@ -6,8 +6,8 @@ public static class BucketSort
 
     public static void Sort(float[] array, int numberOfBuckets)
     {
-        Utils.Utils.PrintArrayHeader(algorithmName: "Bucket Sort Algorithm");
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        Utils.SortingUtils.PrintArrayHeader(algorithmName: "Bucket Sort Algorithm");
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
         List<List<float>> buckets = CreateBuckets(array: array, numberOfBuckets: numberOfBuckets);
 
@@ -24,8 +24,8 @@ public static class BucketSort
         }
 
 
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
-        Utils.Utils.PrintArrayFooter();
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.SortingUtils.PrintArrayFooter();
 
     }
 

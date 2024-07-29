@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="StringManipulationAlgorithms\" />
-    <Folder Include="SearchingAlgorithms\" />
   </ItemGroup>
 
 </Project>

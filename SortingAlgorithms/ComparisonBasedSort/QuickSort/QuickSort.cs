@@ -3,14 +3,14 @@ public static class QuickSort
 {
     public static void Sort(int[] array)
     {
-        Utils.Utils.PrintArrayHeader(algorithmName: "  Quick Sort Algorithm  ");
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        Utils.SortingUtils.PrintArrayHeader(algorithmName: "  Quick Sort Algorithm  ");
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Array to sort:");
         int start = 0;
         int end = array.Length - 1;
         QuickSortAlgorithm(array, start, end);
 
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
-        Utils.Utils.PrintArrayFooter();
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.SortingUtils.PrintArrayFooter();
 
     }
 

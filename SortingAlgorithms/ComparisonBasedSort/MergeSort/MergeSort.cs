@@ -5,13 +5,13 @@ public static class MergeSort
 
     public static void Sort(int[] array)
     {
-        Utils.Utils.PrintArrayHeader(algorithmName: "  Merge Sort Algorithm  ");
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        Utils.SortingUtils.PrintArrayHeader(algorithmName: "  Merge Sort Algorithm  ");
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
         MergeSortAlgorithm(array);
 
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
-        Utils.Utils.PrintArrayFooter();
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.SortingUtils.PrintArrayFooter();
 
     }
 

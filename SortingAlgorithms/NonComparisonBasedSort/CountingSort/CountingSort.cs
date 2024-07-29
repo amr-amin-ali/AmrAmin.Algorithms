@@ -5,8 +5,8 @@ public static class CountingSort
 {
     public static void Sort(int[] array)
     {
-        Utils.Utils.PrintArrayHeader(algorithmName: " Counting Sort Algorithm");
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        Utils.SortingUtils.PrintArrayHeader(algorithmName: " Counting Sort Algorithm");
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
 
         int[] counts = new int[array.Max() + 1];
@@ -25,8 +25,8 @@ public static class CountingSort
             }
         }
 
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
-        Utils.Utils.PrintArrayFooter();
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.SortingUtils.PrintArrayFooter();
 
     }
 }

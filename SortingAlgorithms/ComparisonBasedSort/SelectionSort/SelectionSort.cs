@@ -3,8 +3,8 @@ public class SelectionSort
 {
     public static void Sort(int[] array)
     {
-        Utils.Utils.PrintArrayHeader(algorithmName: "Selection Sort Algorithm");
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        Utils.SortingUtils.PrintArrayHeader(algorithmName: "Selection Sort Algorithm");
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Array to sort:");
 
         for (int i = 0; i < array.Length; i++)
         {
@@ -12,8 +12,8 @@ public class SelectionSort
             Swap(array, minIndex, i);
         }
 
-        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
-        Utils.Utils.PrintArrayFooter();
+        Utils.SortingUtils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.SortingUtils.PrintArrayFooter();
 
     }
 
