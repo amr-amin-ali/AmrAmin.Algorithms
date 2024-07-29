@@ -24,57 +24,90 @@ The key steps in the Quick Sort algorithm are:
 Here's an example implementation of the Quick Sort algorithm in C#:
 
 ```csharp
-public static void QuickSort(int[] arr, int low, int high)
+public static class QuickSort
 {
-    if (low < high)
+    public static void Sort(int[] array)
     {
-        int pi = Partition(arr, low, high);
+        Utils.Utils.PrintArrayHeader(algorithmName: "  Quick Sort Algorithm  ");
+        Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
+        int start = 0;
+        int end = array.Length - 1;
+        QuickSortAlgorithm(array, start, end);
 
-        QuickSort(arr, low, pi - 1);
-        QuickSort(arr, pi + 1, high);
+        Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
+        Utils.Utils.PrintArrayFooter();
+
     }
-}
 
-private static int Partition(int[] arr, int low, int high)
-{
-    int pivot = arr[high];
-    int i = (low - 1);
-
-    for (int j = low; j < high; j++)
+    private static void QuickSortAlgorithm(int[] array, int start, int end)
     {
-        if (arr[j] < pivot)
+
+        /*First we need to partition this array
+         *  as a part of partitioning, the PIVOT which we assume is the last element in this array
+         *  is going to move to it's right partition, then we gety the position of the PIVOT and from there
+         *  we will recursively sort the left and right partition
+         */
+
+        // 0. condition to break the recursion
+        if (start >= end)
         {
-            i++;
-            Swap(arr, i, j);
+            return;
         }
+        // 1. Partition
+        var boundary = Partition(array: array, start: start, end: end);
+        // 2. Sort left 
+        QuickSortAlgorithm(array, start, boundary - 1);
+        // 3. Sort right
+        QuickSortAlgorithm(array, boundary + 1, end);
+
+
+
     }
-
-    Swap(arr, i + 1, high);
-    return i + 1;
+    /// <summary>Implements the partitioning part of the algorithm.</summary>
+    /// <returns>The index of the PIVOT after it has moved to it's right position.</returns>
+    private static int Partition(int[] array, int start, int end)
+    {
+        // let's assume that the PIVOT is the last element in this array.
+        var pivot = array[end];
+        // we also need a variable and set it's value to -1 which mean that the left partition is empty.
+        var boundary = start - 1;
+        // now iterate over the array and if we found an item smaller than the PIVOT, we put it in the left partition.
+        for (int i = start; i <= end; i++)
+        {
+            if (array[i] <= pivot)
+            {
+                //boundary++;
+                //Swap(array, i, boundary);
+                Swap(array, i, ++boundary);
+            }
+        }
+        return boundary;
+    }
+    private static void Swap(int[] array, int index1, int index2)
+    {
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+    }
 }
 
-private static void Swap(int[] arr, int i, int j)
-{
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
+
 ```
 
-The `QuickSort` method takes an integer array `arr`, and the low and high indices of the sub-array to be sorted. The `Partition` method is a helper method that partitions the sub-array around the pivot element.
+The `QuickSortAlgorithm` method takes an integer array `array`, and the low and high indices of the sub-array to be sorted. The `Partition` method is a helper method that partitions the sub-array around the pivot element.
 
 ## Usage Example
 
-Here's an example of how to use the `QuickSort` method:
+Here's an example of how to use the `QuickSortAlgorithm` method:
 
 ```csharp
-int[] numbers = { 5, 2, 8, 1, 9 };
-QuickSort(numbers, 0, numbers.Length - 1);
+int[] quickSortArray = [1, 9, 5, 6, 3, 7, 4, 2, 8];
+QuickSort.Sort(quickSortArray);
 
-// The numbers array is now sorted: { 1, 2, 5, 8, 9 }
+// The numbers array is now sorted: { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
 ```
 
-You can call the `QuickSort` method with any integer array, and it will sort the array in ascending order.
+You can call the `Sort` method with any integer array, and it will sort the array in ascending order.
 
 ## Time Complexity
 

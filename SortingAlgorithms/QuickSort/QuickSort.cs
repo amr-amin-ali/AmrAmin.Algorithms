@@ -5,47 +5,63 @@ public static class QuickSort
     {
         Utils.Utils.PrintArrayHeader(algorithmName: "  Quick Sort Algorithm  ");
         Utils.Utils.PrintArray(array: array, arrayDescription: "Array to sort:");
-
-        QuickSortAlgorithm(array, 0, array.Length - 1);
+        int start = 0;
+        int end = array.Length - 1;
+        QuickSortAlgorithm(array, start, end);
 
         Utils.Utils.PrintArray(array: array, arrayDescription: "Sorted array");
         Utils.Utils.PrintArrayFooter();
 
     }
-    private static void QuickSortAlgorithm(int[] arr, int low, int high)
+
+    private static void QuickSortAlgorithm(int[] array, int start, int end)
     {
 
-        if (low < high)
-        {
-            int pi = Partition(arr, low, high);
+        /*First we need to partition this array
+         *  as a part of partitioning, the PIVOT which we assume is the last element in this array
+         *  is going to move to it's right partition, then we gety the position of the PIVOT and from there
+         *  we will recursively sort the left and right partition
+         */
 
-            QuickSortAlgorithm(arr, low, pi - 1);
-            QuickSortAlgorithm(arr, pi + 1, high);
+        // 0. condition to break the recursion
+        if (start >= end)
+        {
+            return;
         }
+        // 1. Partition
+        var boundary = Partition(array: array, start: start, end: end);
+        // 2. Sort left 
+        QuickSortAlgorithm(array, start, boundary - 1);
+        // 3. Sort right
+        QuickSortAlgorithm(array, boundary + 1, end);
+
+
+
     }
-
-    private static int Partition(int[] arr, int low, int high)
+    /// <summary>Implements the partitioning part of the algorithm.</summary>
+    /// <returns>The index of the PIVOT after it has moved to it's right position.</returns>
+    private static int Partition(int[] array, int start, int end)
     {
-        int pivot = arr[high];
-        int i = low - 1;
-
-        for (int j = low; j < high; j++)
+        // let's assume that the PIVOT is the last element in this array.
+        var pivot = array[end];
+        // we also need a variable and set it's value to -1 which mean that the left partition is empty.
+        var boundary = start - 1;
+        // now iterate over the array and if we found an item smaller than the PIVOT, we put it in the left partition.
+        for (int i = start; i <= end; i++)
         {
-            if (arr[j] < pivot)
+            if (array[i] <= pivot)
             {
-                i++;
-                Swap(arr, i, j);
+                //boundary++;
+                //Swap(array, i, boundary);
+                Swap(array, i, ++boundary);
             }
         }
-
-        Swap(arr, i + 1, high);
-        return i + 1;
+        return boundary;
     }
-
-    private static void Swap(int[] arr, int i, int j)
+    private static void Swap(int[] array, int index1, int index2)
     {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
     }
 }
