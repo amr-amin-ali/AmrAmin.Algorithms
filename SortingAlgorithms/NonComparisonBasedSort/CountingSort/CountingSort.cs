@@ -1,4 +1,4 @@
-﻿namespace AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort;
+﻿namespace AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort.CountingSort;
 using System.Linq;
 
 public static class CountingSort

@@ -1,10 +1,10 @@
 ﻿using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.BubbleSort;
-using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.BucketSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.InsertionSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.MergeSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.QuickSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.SelectionSort;
-using AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort;
+using AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort.BucketSort;
+using AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort.CountingSort;
 
 public class Program
 {

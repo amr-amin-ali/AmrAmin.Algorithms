@@ -1,4 +1,4 @@
-﻿namespace AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.BucketSort;
+﻿namespace AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort.BucketSort;
 using System.Collections.Generic;
 
 public static class BucketSort
