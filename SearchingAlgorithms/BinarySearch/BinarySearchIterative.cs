@@ -17,22 +17,22 @@ public static class BinarySearchIterative
 
         while (left <= right)
         {
-            int mid = left + ((right - left) / 2);
+            int middle = (left + right) / 2;
 
-            if (arr[mid] == target)
+            if (arr[middle] == target)
             {
-                SearchingUtils.PrintResult(mid);
+                SearchingUtils.PrintResult(middle);
                 SearchingUtils.PrintArrayFooter();
-                return mid; // Target found
+                return middle; // Target found
             }
 
-            else if (arr[mid] < target)
+            else if (arr[middle] < target)
             {
-                left = mid + 1; // Target is in the right half
+                left = middle + 1; // Target is in the right half
             }
             else
             {
-                right = mid - 1; // Target is in the left half
+                right = middle - 1; // Target is in the left half
             }
         }
         SearchingUtils.PrintResult(-1);
