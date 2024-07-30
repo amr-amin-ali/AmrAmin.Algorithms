@@ -1,4 +1,5 @@
 ﻿using AmrAmin.Algorithms.SearchingAlgorithms.BinarySearch;
+using AmrAmin.Algorithms.SearchingAlgorithms.ExponentialSearch;
 using AmrAmin.Algorithms.SearchingAlgorithms.JumpSearch;
 using AmrAmin.Algorithms.SearchingAlgorithms.LinearSearch;
 using AmrAmin.Algorithms.SearchingAlgorithms.TernarySearch;
@@ -56,6 +57,11 @@ public class Program
         /////////////////////////////////////////
         int[] jumpSearchArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         JumpSearch.Search(jumpSearchArray, 6);
+        /////////////////////////////////////////
+        int[] exponentialSearchArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        ExponentialSearch.Search(exponentialSearchArray, 87);
+        ExponentialSearch.Search(exponentialSearchArray, 2);
+        ExponentialSearch.Search(exponentialSearchArray, 9);
         /////////////////////////////////////////
 
     }
