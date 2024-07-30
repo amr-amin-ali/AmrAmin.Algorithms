@@ -8,8 +8,9 @@ The Ternary Search Algorithm works by repeatedly dividing the search interval in
 
 1. Initialize the search interval to `[left, right]`.
 2. Divide the interval into three equal parts by computing `mid1` and `mid2`:
-   - `mid1 = left + (right - left) / 3`
-   - `mid2 = right - (right - left) / 3`
+   - `partitionSize = (right - left) / 3`
+   - `mid1 = left + partitionSize`
+   - `mid2 = right - partitionSize`
 3. Evaluate the function at `mid1` and `mid2`.
 4. If the function value at `mid1` is greater than the function value at `mid2`, the minimum (or maximum) must lie in the interval `[left, mid2]`. Update the search interval to `[left, mid2]`.
 5. If the function value at `mid1` is less than the function value at `mid2`, the minimum (or maximum) must lie in the interval `[mid1, right]`. Update the search interval to `[mid1, right]`.
