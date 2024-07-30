@@ -56,7 +56,6 @@ public static int TernarySearchAlgorithm(int[] array, int target, int left, int 
 }
 ```
 
-Here, `f` is the function we want to find the minimum or maximum of, `left` and `right` are the initial search interval, and `tolerance` is the desired accuracy of the solution.
 
 ## Comparison with Binary Search
 
@@ -80,10 +79,4 @@ public class Program
         int[] ternarySearchArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         TernarySearch.Search(ternarySearchArray, 3);
     }
-```
-
-In this example, we define a function `f(x) = x^2 - 4x + 3` and use the Ternary Search Algorithm to find its minimum within the interval `[-10, 10]` with a tolerance of `1e-6`. The output of this program will be:
-
-```
-The minimum of the function is: 1
 ```
