@@ -5,7 +5,7 @@ public static class TernarySearch
 {
     public static int Search(int[] arr, int target)
     {
-        SearchingUtils.PrintSearchHeader(" Linear Search");
+        SearchingUtils.PrintSearchHeader(" Ternary Search");
         SearchingUtils.PrintArray(arr, "Array to search in:");
         SearchingUtils.PrintTarget(target);
 

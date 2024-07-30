@@ -1,4 +1,5 @@
 ﻿using AmrAmin.Algorithms.SearchingAlgorithms.BinarySearch;
+using AmrAmin.Algorithms.SearchingAlgorithms.JumpSearch;
 using AmrAmin.Algorithms.SearchingAlgorithms.LinearSearch;
 using AmrAmin.Algorithms.SearchingAlgorithms.TernarySearch;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.BubbleSort;
@@ -52,6 +53,9 @@ public class Program
         /////////////////////////////////////////
         int[] ternarySearchArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         TernarySearch.Search(ternarySearchArray, 3);
+        /////////////////////////////////////////
+        int[] jumpSearchArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        JumpSearch.Search(jumpSearchArray, 8);
         /////////////////////////////////////////
 
     }
