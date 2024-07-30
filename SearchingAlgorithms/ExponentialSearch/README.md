@@ -64,6 +64,18 @@ The time complexity of the Exponential Search Algorithm is O(log i), where i is 
 
 The overall time complexity of the Exponential Search Algorithm is O(log i), which is better than the O(n) time complexity of the Linear Search Algorithm, and is comparable to the O(log n) time complexity of the Binary Search Algorithm, where n is the size of the array.
 
+
+## Comparison with Binary Search
+
+The Binary Search Algorithm is a well-known and widely used searching algorithm that has a time complexity of O(log n), where n is the size of the sorted array. The Exponential Search Algorithm, on the other hand, has a time complexity of O(log i), where i is the index of the range that contains the target value.
+
+The key difference between the two algorithms is that the Exponential Search Algorithm first determines the range in which the target value might be present, while the Binary Search Algorithm assumes that the entire array is the search range.
+
+When the target value is located near the beginning of the sorted array, the Exponential Search Algorithm can be more efficient than the Binary Search Algorithm, as it can quickly narrow down the search range and then perform a Binary Search within that range. However, if the target value is located near the middle or the end of the array, the Binary Search Algorithm may be more efficient.
+
+Additionally, the Exponential Search Algorithm requires an extra step of determining the search range, which adds some overhead to the algorithm. In cases where the target value is not expected to be located near the beginning of the array, the Binary Search Algorithm may be a more suitable choice.
+
+
 ## Usage Examples
 
 Here's an example of how to use the Exponential Search Algorithm to find a target value in a sorted array:
@@ -111,12 +123,3 @@ Target value 22 found at index 5.
 ```
 
 The Exponential Search Algorithm is particularly useful when the target value is expected to be located near the beginning of the array, as it can quickly narrow down the search range and then perform a Binary Search within that range to find the target value efficiently.
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
