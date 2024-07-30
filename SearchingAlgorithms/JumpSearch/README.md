@@ -63,6 +63,42 @@ If the block size is too small, the algorithm will have to perform more jumps, w
 
 By using the square root of the number of items in the array as the block size, the Jump Search Algorithm achieves the optimal balance between the time spent jumping and the time spent performing linear searches.
 
+
+### Proof of the Ideal Block Size
+
+To prove that the ideal block size for the Jump Search Algorithm is the square root of the number of items in the array, let's consider the total time complexity of the algorithm.
+
+The total time complexity of the Jump Search Algorithm can be divided into two parts:
+
+1. The time spent jumping between blocks, which is proportional to the number of blocks.
+2. The time spent performing the linear search within each block, which is proportional to the average size of each block.
+
+Let's assume that the array has `n` elements, and the block size is `b`. The number of blocks is `n/b`, and the average size of each block is `b`.
+
+The time complexity for jumping between blocks is `O(n/b)`, as we need to perform `n/b` jumps.
+
+The time complexity for the linear search within each block is `O(b)`, as we need to perform a linear search on an average-sized block of `b` elements.
+
+The total time complexity of the Jump Search Algorithm is the sum of these two components:
+
+```
+Total time complexity = O(n/b) + O(b)
+```
+
+To find the optimal block size, we need to minimize the total time complexity. We can do this by taking the derivative of the total time complexity with respect to `b` and setting it equal to 0:
+
+```
+d/db (n/b + b) = 0
+-n/b^2 + 1 = 0
+n/b^2 = 1
+b = sqrt(n)
+```
+
+Therefore, the ideal block size for the Jump Search Algorithm is the square root of the number of items in the array, `sqrt(n)`.
+
+This optimal block size balances the time spent jumping between blocks and the time spent performing the linear search within each block, resulting in the best overall time complexity of `O(sqrt(n))`.
+
+
 ## Usage Examples
 
 Here's an example of how to use the Jump Search Algorithm to find a target value in a sorted array:
@@ -74,28 +110,9 @@ public class Program
 {
     public static void Main()
     {
-        // Define a sorted array
-        int[] arr = { 1, 4, 7, 10, 15, 22, 30, 35, 40, 45, 50 };
-        int target = 22;
-
-        // Find the index of the target value using Jump Search
-        int index = JumpSearch(arr, target);
-
-        if (index == -1)
-        {
-            Console.WriteLine($"Target value {target} not found in the array.");
-        }
-        else
-        {
-            Console.WriteLine($"Target value {target} found at index {index}.");
-        }
+        int[] jumpSearchArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        JumpSearch.Search(jumpSearchArray, 8);
     }
-
-    public static int JumpSearch(int[] arr, int target)
-    {
-        // Implementation of the Jump Search Algorithm as shown earlier
-    }
-}
 ```
 
 In this example, we define a sorted array and a target value, and then use the Jump Search Algorithm to find the index of the target value in the array. The output of this program will be:
