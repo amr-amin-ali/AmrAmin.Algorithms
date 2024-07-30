@@ -1,5 +1,6 @@
 ﻿using AmrAmin.Algorithms.SearchingAlgorithms.BinarySearch;
 using AmrAmin.Algorithms.SearchingAlgorithms.LinearSearch;
+using AmrAmin.Algorithms.SearchingAlgorithms.TernarySearch;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.BubbleSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.InsertionSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.MergeSort;
@@ -48,6 +49,9 @@ public class Program
         /////////////////////////////////////////
         int[] binarySearchRecursive = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         BinarySearchRecursive.Search(binarySearchRecursive, 5);
+        /////////////////////////////////////////
+        int[] ternarySearchArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        TernarySearch.Search(ternarySearchArray, 3);
         /////////////////////////////////////////
 
     }
