@@ -10,21 +10,24 @@ public static class JumpSearch
         SearchingUtils.PrintArray(arr, "Array to search in:");
         SearchingUtils.PrintTarget(target);
 
-
-        int n = arr.Length;
-        int blockSize = (int)Math.Sqrt(n);
+        int blockSize = (int)Math.Sqrt(arr.Length);
         int start = 0;
-        int end = blockSize - 1;
+        int next = blockSize - 1;
 
         // Find the correct block
-        while (end < n && arr[end] <= target)
+        while (next < arr.Length && arr[next] <= target)
         {
-            start = end;
-            end += blockSize;
+            if (start >= arr.Length)
+            {
+                break;
+
+            }
+            start = next;
+            next += blockSize;
         }
         int result = -1;
         // Perform linear search within the block
-        for (int i = start; i <= Math.Min(end, n - 1); i++)
+        for (int i = start; i <= Math.Min(next, arr.Length - 1); i++)
         {
             if (arr[i] == target)
             {
