@@ -90,6 +90,10 @@ public class Program
         StringManipulationAlgorithms.AreAnagramUsingSorting("Amro Amin Ali", "Amro Amin Ali");
         StringManipulationAlgorithms.AreAnagramUsingHistogramming("Amro Amin Ali", "Amri Amin Aly");
         StringManipulationAlgorithms.AreAnagramUsingHistogramming("Amro Amin Ali", "Amro Amin Ali");
+        StringManipulationAlgorithms.IsPalindromeAlgorithm1("ABBA");
+        StringManipulationAlgorithms.IsPalindromeAlgorithm1("ABWSBA");
+        StringManipulationAlgorithms.IsPalindromeAlgorithm2("ABBA");
+        StringManipulationAlgorithms.IsPalindromeAlgorithm2("ABWSBA");
 
     }
 }

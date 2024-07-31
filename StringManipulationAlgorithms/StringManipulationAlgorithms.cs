@@ -67,6 +67,49 @@ public static class StringManipulationAlgorithms
         StringManipulationUtils.PrintStringFooter();
         return result.ToString();
     }
+    public static string IsPalindromeAlgorithm1(string word)
+    {
+        bool result = true;
+        StringManipulationUtils.PrintSearchHeader("Is Palindrome");
+        StringManipulationUtils.PrintContent($"Text: {word}");
+        if (!String.IsNullOrWhiteSpace(word))
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] != word[word.Length - (i + 1)])
+                {
+                    result = false;
+                }
+            }
+        }
+        StringManipulationUtils.PrintContent($"Is Palindrome = {result}");
+        StringManipulationUtils.PrintStringFooter();
+        return result.ToString();
+    }
+    public static string IsPalindromeAlgorithm2(string word)
+    {
+        bool result = true;
+        StringManipulationUtils.PrintSearchHeader("Is Palindrome V2");
+        StringManipulationUtils.PrintContent($"Text: {word}");
+        if (!String.IsNullOrWhiteSpace(word))
+        {
+            word = Regex.Replace(input: word.Trim(), pattern: " +", replacement: "").ToLower();
+
+            int leftIndex = 0;
+            int rightIndex = word.Length - 1;
+
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[leftIndex++] != word[rightIndex--])
+                {
+                    result = false;
+                }
+            }
+        }
+        StringManipulationUtils.PrintContent($"Is Palindrome = {result}");
+        StringManipulationUtils.PrintStringFooter();
+        return result.ToString();
+    }
 
     public static string CapitalizeFirstChar(string text)
     {
