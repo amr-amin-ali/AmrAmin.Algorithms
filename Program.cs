@@ -10,6 +10,7 @@ using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.QuickSort;
 using AmrAmin.Algorithms.SortingAlgorithms.ComparisonBasedSort.SelectionSort;
 using AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort.BucketSort;
 using AmrAmin.Algorithms.SortingAlgorithms.NonComparisonBasedSort.CountingSort;
+using AmrAmin.Algorithms.StringManipulationAlgorithms;
 
 public class Program
 {
@@ -63,6 +64,32 @@ public class Program
         ExponentialSearch.Search(exponentialSearchArray, 2);
         ExponentialSearch.Search(exponentialSearchArray, 9);
         /////////////////////////////////////////
+        // STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | 
+        // STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | 
+        // STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | 
+        // STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | 
+        // STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | 
+        // STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | 
+        // STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | STRING MANIPULATION | 
+        StringManipulationAlgorithms.CountVowels("Amro Amin");
+        StringManipulationAlgorithms.Reverse("Amro Amin");
+        StringManipulationAlgorithms.ReverseWordsV1("Amro Amin Ali");
+        StringManipulationAlgorithms.ReverseWordsV2("Amro Amin Ali");
+        StringManipulationAlgorithms.Rotate("Amro Amin Ali");
+        StringManipulationAlgorithms.AreRotations("Amro Amin Ali", "iAmro Amin Al");
+        StringManipulationAlgorithms.AreRotations(null, null);
+        StringManipulationAlgorithms.RemoveDuplicates("Amro Amin Ali");
+        StringManipulationAlgorithms.RemoveDuplicates("");
+        StringManipulationAlgorithms.MostRepeated("Amro Amin Aliiii");
+        StringManipulationAlgorithms.MostRepeatedV2("Amro Amin Aliiii");
+        StringManipulationAlgorithms.MostRepeated(null);
+        StringManipulationAlgorithms.CapitalizeFirstChar("    Amro Amin Ali");
+        StringManipulationAlgorithms.Capitalize("    Amro AmiN Ali");
+        StringManipulationAlgorithms.Capitalize(" ");
+        StringManipulationAlgorithms.AreAnagramUsingSorting("Amro Amin Ali", "Amri Amin Aly");
+        StringManipulationAlgorithms.AreAnagramUsingSorting("Amro Amin Ali", "Amro Amin Ali");
+        StringManipulationAlgorithms.AreAnagramUsingHistogramming("Amro Amin Ali", "Amri Amin Aly");
+        StringManipulationAlgorithms.AreAnagramUsingHistogramming("Amro Amin Ali", "Amro Amin Ali");
 
     }
 }
